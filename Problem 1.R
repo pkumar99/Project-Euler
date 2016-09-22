@@ -1,9 +1,13 @@
-sum <- 0
-for(x in 1:999){
-  if(x%%3==0){
-    sum <- sum + x
-  } else if(x%%5==0){
-    sum <- sum + x
+mod35 <- function(N) {
+  sum <- 0
+  for(x in 1:N){
+    if(x%%3==0){
+      sum <- sum + x
+    } else if(x%%5==0){
+      sum <- sum + x
+    }
   }
+  return(sum)
 }
-print(sum) #Prints 233,168
+print(mod35(999)) #Prints 233,168
+

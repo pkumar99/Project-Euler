@@ -6,3 +6,15 @@ Fibonacci <- function(x) {
   }
   return(fib)
 }
+
+N <- 4000000
+fib <- Fibonacci(N)
+sum <- 0
+#Traverse the array and pick out even values
+for (n in fib) {
+  if((n%%2) == 0){
+    sum <- sum + n
+  }
+}
+
+sum
